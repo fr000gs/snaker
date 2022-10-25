@@ -17,7 +17,7 @@ class Agent:
         self.memory = deque(maxlen=MAX_MEMORY) # popleft()
         self.model = Linear_QNet(11,256,3) 
         self.trainer = QTrainer(self.model,lr=LR,gamma=self.gamma)
-        self.model.load_state_dict(torch.load('/home/fr000gs/SnakeGameAI/model.pth'))
+        self.model.load_state_dict(torch.load('model.pth'))
         self.model.train()
         # for n,p in self.model.named_parameters():
         #     print(p.device,'',n) 
