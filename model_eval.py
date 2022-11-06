@@ -5,7 +5,7 @@ from Helper import plot
 
 n_game = 0
 
-model = torch.jit.load('/home/fr000gs/SnakeGameAI/model.pt')
+model = torch.jit.load('model.pt')
 model.eval()
 
 def get_state(game):
